@@ -34,7 +34,7 @@ export default function ProjectCard({
         <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
       </div>
 
-      <div className="flex flex-1 flex-col p-6">
+      <div className="flex flex-1 flex-col p-6 bg-gray-300">
         {projectTypes.length > 0 && (
           <div className="mb-3 flex flex-wrap gap-2">
             {projectTypes.map((type) => (

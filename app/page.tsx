@@ -1,8 +1,29 @@
+"use client"
+
 import Image from "next/image";
 import ProfileButton from "@/components/profilebtn";
 import ProjectCard from "@/components/cards/project-card";
+import projects from "@/data/projects";
+
+import { useState } from "react";
 
 export default function Home() {
+  const [selectedType, setSelectedType] = useState<string>("All");
+
+  const projectTypes = [
+    "All",
+    ...Array.from(
+      new Set(projects.flatMap((project) => project.projectTypes))
+    ),
+  ];
+
+  const filteredProjects =
+  selectedType === "All"
+      ? projects
+      : projects.filter((project) =>
+          project.projectTypes.includes(selectedType)
+        );
+
   return (
     <div className="flex min-h-screen items-center justify-center bg-black">
       <main className="flex min-h-screen w-full flex-col items-center justify-between sm:items-start">
@@ -33,8 +54,33 @@ export default function Home() {
         <div id="experience" className="h-dvh">
 
         </div>
-        <div id="project" className="h-dvh">
-
+        <div id="project" className="min-h-dvh w-full px-6 py-20 sm:px-16">
+          <div className="mb-8 flex flex-wrap gap-3">
+            {projectTypes.map((type) => (
+              <button
+                key={type}
+                onClick={() => setSelectedType(type)}
+                className={`rounded-full px-4 py-1.5 text-sm font-medium transition
+                  ${
+                    selectedType === type
+                      ? "bg-white text-black"
+                      : "border border-white/30 text-white hover:bg-white hover:text-black"
+                  }
+                `}
+              >
+                {type}
+              </button>
+            ))}
+          </div>
+          <div className="mb-12 text-center sm:text-left">
+            <h2 className="text-4xl font-bold tracking-tight">Featured Projects</h2>
+            <p className="mt-4 text-muted-foreground">A collection of things I&apos;ve built with passion.</p>
+          </div>
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {filteredProjects.map((project) => (
+              <ProjectCard key={project.title} {...project} />
+            ))}
+          </div>
         </div>
       </main>
     </div>
