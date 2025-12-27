@@ -1,5 +1,6 @@
 import Image from "next/image";
 import ProfileButton from "@/components/profilebtn";
+import ProjectCard from "@/components/cards/project-card";
 
 export default function Home() {
   return (
