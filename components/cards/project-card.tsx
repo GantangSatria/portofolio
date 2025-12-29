@@ -1,17 +1,8 @@
 import Image from "next/image"
+import Project from "@/types/projects"
 import { Github, ExternalLink } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-
-export interface ProjectCardProps {
-  title: string
-  description: string
-  image: string
-  githubUrl: string
-  liveUrl?: string | null
-  projectTypes: string[]
-  techStack: string[]
-}
 
 export default function ProjectCard({
   title,
@@ -21,9 +12,9 @@ export default function ProjectCard({
   liveUrl,
   projectTypes = [],
   techStack = [],
-}: ProjectCardProps) {
+}: Project) {
   return (
-    <div className="group relative flex flex-col overflow-hidden rounded-xl border bg-card transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/10">
+    <div className="group relative flex flex-col overflow-hidden rounded-xl bg-card transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/10">
       <div className="relative aspect-video w-full overflow-hidden">
         <Image
           src={image || "/placeholder.svg?height=400&width=600&query=project+screenshot"}

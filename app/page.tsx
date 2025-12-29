@@ -49,12 +49,19 @@ export default function Home() {
           </div>
         </div>
         <div id="achievement" className="h-dvh">
+          <div className="">
+
+          </div>
 
         </div>
         <div id="experience" className="h-dvh">
 
         </div>
-        <div id="project" className="min-h-dvh w-full px-6 py-20 sm:px-16">
+        <div id="project" className="min-h-dvh w-full px-6 py-12 sm:px-16">
+          <div className="mb-4 text-center sm:text-left">
+            <h2 className="text-4xl font-bold tracking-tight text-white">Featured Projects</h2>
+            <p className="mt-4 text-muted-foreground">A collection of things I&apos;ve built with passion.</p>
+          </div>
           <div className="mb-8 flex flex-wrap gap-3">
             {projectTypes.map((type) => (
               <button
@@ -71,10 +78,6 @@ export default function Home() {
                 {type}
               </button>
             ))}
-          </div>
-          <div className="mb-12 text-center sm:text-left">
-            <h2 className="text-4xl font-bold tracking-tight">Featured Projects</h2>
-            <p className="mt-4 text-muted-foreground">A collection of things I&apos;ve built with passion.</p>
           </div>
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
             {filteredProjects.map((project) => (
