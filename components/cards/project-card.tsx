@@ -4,15 +4,16 @@ import { Github, ExternalLink } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 
-export default function ProjectCard({
-  title,
-  description,
-  image,
-  githubUrl,
-  liveUrl,
-  projectTypes = [],
-  techStack = [],
-}: Project) {
+export default function ProjectCard(props: Project) {
+  const {
+    title,
+    description,
+    image,
+    githubUrl,
+    liveUrl,
+    projectTypes,
+    techStack,
+  } = props;
   return (
     <div className="group relative flex flex-col overflow-hidden rounded-xl bg-card transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/10">
       <div className="relative aspect-video w-full overflow-hidden">
