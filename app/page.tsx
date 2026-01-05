@@ -31,7 +31,7 @@ export default function Home() {
         <div id="landing" className="relative h-dvh w-full flex flex-col items-center justify-center gap-6 text-center sm:items-start sm:text-left text-white">
           <HeroScene />
 
-          <div className="container relative z-10 mx-auto px-6 text-center">
+          <div className="container relative z-1 mx-auto px-6 text-center">
             {/* <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-1.5 text-sm backdrop-blur-sm transition-colors hover:bg-white/10">
               <span className="relative flex h-2 w-2">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-blue-400 opacity-75"></span>
