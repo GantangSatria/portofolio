@@ -45,21 +45,35 @@ export default function Home() {
           </div>
         </div>
         <div id="profile" className="h-dvh w-full justify-items-center p-16">
-          <div className="relative flex w-52 h-52 bg-white rounded-full mt-16 border-4">
-            <Image
-            src="/Foto.jpg"
-            alt=""
-            fill
-            className="object-cover rounded-full hover:scale-105 hover:ease-in duration-300"
-            priority
-            />
-          </div>
-          <h1 className="text-3xl mt-4 font-bold">Gantang Satria Yudha</h1>
-          <p className="my-2">Technology Student</p>
-          <div className="flex flex-row gap-2 text-black text-center">
-            <ProfileButton href="https://github.com/gantangsatria" label="Github"/>
-            <ProfileButton href="https://www.linkedin.com/in/gantangsatriayudha/" label="LinkedIn"/>
-            <ProfileButton href="#" label="Email"/>
+          <div className="container max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-12">
+            <div className="relative group shrink-0">
+              <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+              <div className="relative w-64 h-64 bg-zinc-900 rounded-full overflow-hidden border-2 border-white/10">
+                <Image
+                  src="/Foto.jpg"
+                  alt="Gantang Satria Yudha"
+                  fill
+                  className="object-cover transition duration-500 group-hover:scale-110"
+                  priority
+                />
+              </div>
+            </div>
+
+            <div className="text-center md:text-left">
+              <span className="text-blue-500 font-mono tracking-widest uppercase text-sm font-semibold">About Me</span>
+              <h2 className="text-4xl sm:text-5xl font-bold mt-2 text-white">Gantang Satria Yudha</h2>
+              <p className="text-xl text-white/60 mt-4 leading-relaxed">
+                A dedicated <span className="text-white font-medium">Technology Student</span> passionate about building
+                scalable web applications and intuitive user interfaces. I specialize in turning complex problems into
+                elegant, pixel-perfect solutions.
+              </p>
+
+              <div className="mt-8 flex flex-wrap justify-center md:justify-start gap-3">
+                <ProfileButton href="https://github.com/gantangsatria" label="Github" />
+                <ProfileButton href="https://www.linkedin.com/in/gantangsatriayudha/" label="LinkedIn" />
+                <ProfileButton href="#" label="Email Me" />
+              </div>
+            </div>
           </div>
         </div>
         <div id="achievement" className="h-dvh">
@@ -73,7 +87,7 @@ export default function Home() {
         </div>
         <div id="project" className="min-h-dvh w-full px-6 py-12 sm:px-16">
           <div className="mb-4 text-center sm:text-left">
-            <h2 className="text-4xl font-bold tracking-tight text-white">Featured Projects</h2>
+            <h2 className="text-4xl sm:text-6xl font-bold tracking-tight italic uppercase text-white">Featured Work</h2>
             <p className="mt-4 text-muted-foreground">A collection of things I&apos;ve built with passion.</p>
           </div>
           <div className="mb-8 flex flex-wrap gap-3">
