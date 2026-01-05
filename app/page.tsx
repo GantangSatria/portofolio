@@ -4,6 +4,7 @@ import Image from "next/image";
 import ProfileButton from "@/components/profilebtn";
 import ProjectCard from "@/components/cards/project-card";
 import projects from "@/data/projects";
+import HeroScene from "@/components/hero-scene"
 
 import { useState } from "react";
 
@@ -27,8 +28,21 @@ export default function Home() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-black">
       <main className="flex min-h-screen w-full flex-col items-center justify-between sm:items-start">
-        <div id="landing" className="h-dvh flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          
+        <div id="landing" className="relative h-dvh w-full flex flex-col items-center justify-center gap-6 text-center sm:items-start sm:text-left text-white">
+          <HeroScene />
+
+          <div className="container relative z-10 mx-auto px-6 text-center">
+            {/* <div className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-1.5 text-sm backdrop-blur-sm transition-colors hover:bg-white/10">
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-blue-400 opacity-75"></span>
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-blue-500"></span>
+              </span>
+              Available for new projects
+            </div> */}
+
+            <h1 className="text-6xl font-black tracking-tighter sm:text-8xl md:text-9xl">WELCOME</h1>
+
+          </div>
         </div>
         <div id="profile" className="h-dvh w-full justify-items-center p-16">
           <div className="relative flex w-52 h-52 bg-white rounded-full mt-16 border-4">
