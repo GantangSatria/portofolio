@@ -1,11 +1,5 @@
 import type { Achievement } from "@/types/achievements"
 
-//   title: string
-//   venue: string
-//   year: string
-//   description: string
-//   image: string
-
 const achievements: Achievement[] = [
     {
         title: "2nd-place",
