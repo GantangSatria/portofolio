@@ -4,7 +4,9 @@ import Image from "next/image";
 import ProfileButton from "@/components/profilebtn";
 import ProjectCard from "@/components/cards/project-card";
 import projects from "@/data/projects";
+import achievements from "@/data/achievements";
 import HeroScene from "@/components/hero-scene"
+import AchievementRow from "@/components/row/achievement-row";
 
 import { useState } from "react";
 
@@ -45,7 +47,7 @@ export default function Home() {
           </div>
         </div>
         <div id="profile" className="h-dvh w-full justify-items-center p-16">
-          <div className="container max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-12">
+          <div className="container max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-12 mt-12">
             <div className="relative group shrink-0">
               <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
               <div className="relative w-64 h-64 bg-zinc-900 rounded-full overflow-hidden border-2 border-white/10">
@@ -76,9 +78,19 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div id="achievement" className="h-dvh">
-          <div className="">
-
+        <div id="achievement" className="h-dvh w-full">
+          <div className="container mx-auto max-w-5xl">
+            <div className="mb-12">
+              <h2 className="text-4xl sm:text-6xl font-bold tracking-tight italic uppercase text-white">
+                Achievements
+              </h2>
+            </div>
+              <div className="flex flex-col">
+                {achievements.map((item, index) => (
+                  <AchievementRow key={index} {...item} />
+                ))
+                }
+              </div>
           </div>
 
         </div>
