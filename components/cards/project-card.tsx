@@ -30,7 +30,7 @@ export default function ProjectCard(props: Project) {
         {projectTypes.length > 0 && (
           <div className="mb-3 flex flex-wrap gap-2">
             {projectTypes.map((type) => (
-              <Badge key={type} variant="secondary" className="bg-primary/10 text-primary hover:bg-primary/20">
+              <Badge key={type} variant="secondary" className="text-primary hover:bg-primary/20">
                 {type}
               </Badge>
             ))}
@@ -55,7 +55,7 @@ export default function ProjectCard(props: Project) {
             asChild
             variant="outline"
             size="sm"
-            className="h-9 gap-2 transition-colors hover:bg-primary hover:text-primary-foreground bg-transparent"
+            className="h-9 gap-2 transition-colors hover:bg-primary hover:text-primary-foreground"
           >
             <a href={githubUrl} target="_blank" rel="noopener noreferrer">
               <Github className="h-4 w-4" />
