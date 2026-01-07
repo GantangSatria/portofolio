@@ -48,7 +48,7 @@ export default function Home() {
 
           </div>
         </div>
-        <div id="profile" className="h-dvh w-full justify-items-center p-16">
+        <div id="profile" className="min-h-dvh w-full justify-items-center px-6 py-32 sm:px-16">
           <div className="container max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-12 mt-12">
             <div className="relative group shrink-0">
               <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
