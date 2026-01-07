@@ -5,8 +5,10 @@ import ProfileButton from "@/components/profilebtn";
 import ProjectCard from "@/components/cards/project-card";
 import projects from "@/data/projects";
 import achievements from "@/data/achievements";
+import experiences from "@/data/experiences";
 import HeroScene from "@/components/hero-scene"
 import AchievementRow from "@/components/row/achievement-row";
+import ExperienceRow from "@/components/row/experience-row";
 
 import { useState } from "react";
 
@@ -78,7 +80,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div id="achievement" className="h-dvh w-full">
+        <div id="achievement" className="w-full px-6 py-32 sm:px-16">
           <div className="container mx-auto max-w-5xl">
             <div className="mb-12">
               <h2 className="text-4xl sm:text-6xl font-bold tracking-tight italic uppercase text-white">
@@ -94,8 +96,17 @@ export default function Home() {
           </div>
 
         </div>
-        <div id="experience" className="h-dvh">
-
+        <div id="experience" className="w-full px-6 py-32 sm:px-16">
+          <div className="container mx-auto max-w-5xl">
+            <div className="mb-12">
+              <h2 className="text-4xl sm:text-6xl font-bold tracking-tight italic uppercase text-white">Experience</h2>
+            </div>
+            <div className="flex flex-col">
+              {experiences.map((item, index) => (
+                <ExperienceRow key={index} {...item} />
+              ))}
+            </div>
+          </div>
         </div>
         <div id="project" className="min-h-dvh w-full px-6 py-12 sm:px-16">
           <div className="mb-4 text-center sm:text-left">
