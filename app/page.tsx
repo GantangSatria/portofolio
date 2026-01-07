@@ -9,6 +9,7 @@ import experiences from "@/data/experiences";
 import HeroScene from "@/components/hero-scene"
 import AchievementRow from "@/components/row/achievement-row";
 import ExperienceRow from "@/components/row/experience-row";
+import HeroBannerText from "@/components/hero-banner-text";
 
 import { useState } from "react";
 
@@ -44,7 +45,7 @@ export default function Home() {
               Available for new projects
             </div> */}
 
-            <h1 className="text-6xl font-black tracking-tighter sm:text-8xl md:text-9xl">WELCOME</h1>
+            <HeroBannerText/>
 
           </div>
         </div>
