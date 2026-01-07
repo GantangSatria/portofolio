@@ -11,6 +11,8 @@ import AchievementRow from "@/components/row/achievement-row";
 import ExperienceRow from "@/components/row/experience-row";
 import HeroBannerText from "@/components/hero-banner-text";
 
+import { Download } from "lucide-react";
+
 import { useState } from "react";
 
 export default function Home() {
@@ -73,10 +75,21 @@ export default function Home() {
                 elegant, pixel-perfect solutions.
               </p>
 
-              <div className="mt-8 flex flex-wrap justify-center md:justify-start gap-3">
+              <div className="mt-8 flex flex-wrap justify-center gap-3">
                 <ProfileButton href="https://github.com/gantangsatria" label="Github" />
                 <ProfileButton href="https://www.linkedin.com/in/gantangsatriayudha/" label="LinkedIn" />
                 <ProfileButton href="#" label="Email Me" />
+              </div>
+
+              <div className="mt-10 flex justify-center">
+                <a
+                  href="/cv-gantang-satria-yudha.pdf"
+                  download
+                  className="inline-flex items-center gap-2 rounded-full px-8 py-3 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold transition hover:scale-105"
+                >
+                  <Download className="h-5 w-5" />
+                  Download CV
+                </a>
               </div>
             </div>
           </div>
