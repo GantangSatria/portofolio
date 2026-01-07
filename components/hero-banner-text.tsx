@@ -12,7 +12,7 @@ export default function HeroBannerText() {
             className="inline-block animate-bounce"
             style={{
               animationDelay: `${index * 0.1}s`,
-              backgroundImage: `linear-gradient(135deg, #60a5fa, #a78bfa, #ec4899)`,
+              backgroundImage: `linear-gradient(135deg, #f9fafb, #e5e7eb, #cbd5f5)`,
               backgroundClip: "text",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",

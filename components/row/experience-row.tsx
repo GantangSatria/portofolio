@@ -34,7 +34,7 @@ export default function ExperienceRow( props: Experience) {
       </div>
 
       <div className="flex flex-1 flex-col rounded-lg bg-white/[0.02] border border-white/10 p-6 backdrop-blur-sm">
-        <span className="mb-2 inline-flex w-fit rounded-full bg-cyan-500/20 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-cyan-300">
+        <span className="mb-2 inline-flex w-fit rounded-full bg-blue-500/20 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-blue-500">
           {year}
         </span>
 

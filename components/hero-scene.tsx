@@ -50,7 +50,7 @@ export default function HeroScene() {
         <AnimatedShapes />
 
         <Environment preset="city" />
-        <OrbitControls enableZoom={false} enablePan={false} />
+        <OrbitControls enableZoom={false} enablePan={false} autoRotate autoRotateSpeed={0.5} />
       </Canvas>
     </div>
   )
